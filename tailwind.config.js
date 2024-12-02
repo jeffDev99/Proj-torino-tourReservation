@@ -8,9 +8,17 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        primary: "#28a745",
+        secondary: "#10411b",
+        white: "#fff",
+        black:"#000",
+        grey : "#595959",
+        darkGrey:"#282828",
+        lightGreen:"#009ECA",
       },
+      fontFamily: {
+        yekan: ['var(--yekan)']
+      }
     },
   },
   plugins: [],

@@ -1,0 +1,3 @@
+.outline{
+  @apply border border-2 border-primary text-primary;
+}
