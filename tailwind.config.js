@@ -12,8 +12,8 @@ module.exports = {
         secondary: "#10411b",
         white: "#fff",
         black:"#000",
-        grey : "#595959",
-        darkGrey:"#282828",
+        gray : "#595959",
+        darkGray:"#282828",
         lightGreen:"#009ECA",
       },
       fontFamily: {
