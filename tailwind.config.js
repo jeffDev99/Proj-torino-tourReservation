@@ -18,6 +18,9 @@ module.exports = {
       },
       fontFamily: {
         yekan: ['var(--yekan)']
+      },
+      boxShadow: {
+        'cus-1': '0 0 2px #00000040',
       }
     },
   },
