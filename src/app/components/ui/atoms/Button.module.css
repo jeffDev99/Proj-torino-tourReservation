@@ -8,3 +8,10 @@
 .outline:hover svg path{
   @apply fill-white transition-all;
 }
+
+.containd{
+  @apply  bg-primary text-white;
+}
+.containd:hover{
+  @apply bg-[#218e3a] transition-all ;
+}

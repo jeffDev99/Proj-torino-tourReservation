@@ -16,13 +16,13 @@ import styles from "./Header.module.css";
 export default function Header() {
   const [menu , setMenu] = useState(false)
   return (
-    <header className="py-4">
+    <header className="py-4 sticky z-10 top-0 bg-white ">
       <Container>
         <div className="flex gap-20 items-center justify-between">
           <Image src="/logo.svg" width={146} height={44} alt="logo" className="hidden lg:block" />
           <HambergerMenu size={24} color="#10411B" className="lg:hidden" onClick={()=>setMenu(true)}/>
           <MainMenu className={`lg:block ${menu ? "block" : "hidden"}`} menu={menu} setMenu={setMenu}></MainMenu>
-          <Button className={`outline`}>
+          <Button varient="outline">
             <div className="hidden lg:flex">
               <Profile size="24" color="#28A745" variant="Bold" />
               ورود | ثبت نام

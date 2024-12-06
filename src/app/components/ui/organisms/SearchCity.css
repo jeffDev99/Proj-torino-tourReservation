@@ -1,0 +1,24 @@
+.rmdp-arrow-container{
+  @apply !hidden
+}
+.rmdp-header-values{
+  @apply !bg-primary !text-white !p-2 !rounded !text-center
+}
+.rmdp-week-day{
+  @apply !text-primary
+}
+.rmdp-day.rmdp-selected span:not(.highlight){
+  @apply !bg-primary
+}
+.rmdp-day.rmdp-today span , .rmdp-day:not(.rmdp-disabled,.rmdp-day-hidden) span:hover{
+  @apply !bg-[rgb(40,167,69,60%)]
+}
+.rmdp-top-class {
+  @apply !justify-center
+}
+.rmdp-wrapper{
+  @apply !w-full
+}
+.rmdp-day span{
+  @apply !rounded
+}
