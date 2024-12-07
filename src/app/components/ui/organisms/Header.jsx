@@ -22,7 +22,7 @@ export default function Header() {
           <Image src="/logo.svg" width={146} height={44} alt="logo" className="hidden lg:block" />
           <HambergerMenu size={24} color="#10411B" className="lg:hidden" onClick={()=>setMenu(true)}/>
           <MainMenu className={`lg:block ${menu ? "block" : "hidden"}`} menu={menu} setMenu={setMenu}></MainMenu>
-          <Button varient="outline">
+          <Button varient="outline" color="#28A745" bgColor="#28A745" hoverBgColor="#28A745" hoverTextColor="#ffffff">
             <div className="hidden lg:flex">
               <Profile size="24" color="#28A745" variant="Bold" />
               ورود | ثبت نام

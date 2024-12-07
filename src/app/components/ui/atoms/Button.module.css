@@ -1,17 +1,25 @@
+/***************varients****************/
+/* outline */
 .outline{
-  @apply border border-2 border-primary text-primary;
+  @apply border border-2;
 }
 .outline:hover{
-  @apply bg-primary border-primary text-white transition-all ;
+  @apply transition-all ;
 }
-
 .outline:hover svg path{
   @apply fill-white transition-all;
 }
-
+/* containd */
 .containd{
-  @apply  bg-primary text-white;
+  /* @apply  text-white; */
 }
 .containd:hover{
-  @apply bg-[#218e3a] transition-all ;
+  @apply  transition-all ;
 }
+
+
+/***************size****************/
+.lg{}
+.xl{}
+.xl2{}
+
