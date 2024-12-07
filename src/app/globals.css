@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import '/swiper/swiper-bundle.min.css';
 
 :root {
   --background: #ffffff;
@@ -16,4 +17,8 @@
 
 body {
   @apply font-yekan;
+}
+
+.swiper-3d .swiper-slide-shadow{
+  background:none !important;
 }
