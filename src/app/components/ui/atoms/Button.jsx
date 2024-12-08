@@ -11,18 +11,6 @@ function Button({ children, onClick, className, type, varient, color, bgColor, h
       }}
       type={type}
       onClick={onClick}
-      onMouseEnter={(e) => {
-        if (hoverBgColor || hoverTextColor) {
-          e.target.style.backgroundColor = hoverBgColor;
-          e.target.style.color = hoverTextColor;
-        }
-      }}
-      onMouseLeave={(e) => {
-        if (hoverBgColor || hoverTextColor) {
-          e.target.style.backgroundColor = varient === "containd" ? bgColor : "transparent";
-          e.target.style.color = color;
-        }
-      }}
     >
       {children}
     </button>

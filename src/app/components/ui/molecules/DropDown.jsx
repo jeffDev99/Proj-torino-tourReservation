@@ -29,11 +29,9 @@ export default function DropDown({ icon, title, id, children ,dropClassName}) {
         {title}
       </div>
 
-      <div
-        className={`${
+      <div className={`${
           dropdownOpen ? `top-full opacity-100 visible` : "top-[110%] invisible opacity-0"
-        } absolute left-0 z-40 mt-2 w-full rounded-xl border border-[#0000001F] bg-white overflow-hidden shadow-card transition-all ${dropClassName}`}
-      >
+        } absolute left-0 z-40 mt-2 w-full rounded-xl border border-[#0000001F] bg-white overflow-hidden shadow-card transition-all ${dropClassName}`}>
         {children}
       </div>
     </div>

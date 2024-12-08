@@ -4,6 +4,7 @@ import AllTours from "./components/ui/organisms/AllTours";
 import CTA from "./components/ui/organisms/CTA";
 import Slider from "./components/ui/organisms/Slider";
 
+
 export default function Home() {
   return (
     <>

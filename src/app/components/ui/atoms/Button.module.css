@@ -6,9 +6,9 @@
 .outline:hover{
   @apply transition-all ;
 }
-.outline:hover svg path{
+/* .outline:hover svg path{
   @apply fill-white transition-all;
-}
+} */
 /* containd */
 .containd{
   /* @apply  text-white; */
