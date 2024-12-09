@@ -18,7 +18,7 @@ export default function ProductCard({ tourId, imgSrc, title, desc, price, classN
             رزرو
           </Button>
           <p className="text-gray text-xs">
-            <span className="text-lightGreen text-base">{useSp(price)}</span> تومان 
+            <span className="text-lightGreen text-base">{useSp(price)}</span>تومان 
           </p>
         </div>
       </figcaption>

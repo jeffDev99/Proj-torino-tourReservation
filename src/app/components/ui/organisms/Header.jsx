@@ -7,6 +7,7 @@ import Container from "../../templates/Container";
 import Button from "../atoms/Button";
 import MainMenu from "../molecules/MainMenu";
 import Modal from "./Modal";
+import Input from "../atoms/input";
 // icons
 import { Profile } from "iconsax-react";
 import { HambergerMenu } from "iconsax-react";
@@ -17,6 +18,10 @@ import styles from "./Header.module.css";
 export default function Header() {
   const [menu, setMenu] = useState(false);
   const [modal, setModal] = useState(false);
+  const [step,setStep ] = useState(1);
+  const [phone, setPhone] = useState("");
+
+
   return (
     <>
       <header className="py-4 sticky z-10 top-0 bg-white ">
@@ -40,8 +45,7 @@ export default function Header() {
       <Modal modal={modal} setModal={setModal} >
         <h3 className="text-xl lg:text-[28px] mb-9">ورود به تورینو</h3>
         <div className="self-start mb-10 w-full">
-          <p className=" mb-3">شماره موبایل خود را وارد کنید</p>
-          <input type="number" className="border rounded-[6px] w-full border-[#00000040] px-2 py-4 " placeholder="0912***4253" />
+          <Input label="شماره موبایل خود را وارد کنید" type="number" placeholder="0912***4253" classNameInp="border rounded-[6px] w-full border-[#00000040] px-2 py-4 " name="phone" id="phone" value={phone} onChange={(e) => {setPhone(e.target.value)}} />
         </div>
         <Button varient="containd" color="#fff" bgColor="#28A745" className="w-full justify-center text-[18px] py-4 rounded-[6px]">
           ارسال کد تایید
