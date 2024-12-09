@@ -14,7 +14,7 @@
     --foreground: #ededed;
   }
 }
-
+/* !must edit : add vazir font */
 body {
   @apply font-yekan;
 }

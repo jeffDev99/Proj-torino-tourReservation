@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import Button from "../atoms/Button";
 import { useRouter } from "next/navigation";
+import { useSp } from "@/app/hooks/utils";
 
 export default function ProductCard({ tourId, imgSrc, title, desc, price, className }) {
   const route = useRouter();
@@ -17,7 +18,7 @@ export default function ProductCard({ tourId, imgSrc, title, desc, price, classN
             رزرو
           </Button>
           <p className="text-gray text-xs">
-            <span className="text-lightGreen text-base">{price}</span>تومان
+            <span className="text-lightGreen text-base">{useSp(price)}</span> تومان 
           </p>
         </div>
       </figcaption>
