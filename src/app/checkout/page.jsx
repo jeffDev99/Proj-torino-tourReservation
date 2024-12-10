@@ -6,7 +6,7 @@ import Button from "../components/ui/atoms/Button";
 
 export default function Checkout() {
   return (
-    <div className=" bg-[#F3F3F3] py-9">
+    <div className=" bg-[#F3F3F3] py-9 min-h-[500px]">
       <Container>
         <div className="flex gap-x-4 flex-col lg:flex-row justify-between ">
           <div className="bg-white rounded-[10px] p-4 lg:p-5 border border-[#00000033] lg:w-9/12 lg:mb-0 mb-9 ">
