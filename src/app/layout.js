@@ -1,5 +1,6 @@
 import localFont from "next/font/local";
-import MainLayout from "./components/templates/layout/MainLayout";
+import MainLayout from "../components/templates/layout/MainLayout";
+import TanstackQueryProvider from "@/components/partials/provider/TanstackQueryProvider";
 import "./globals.css";
 
 const yekan = localFont({
@@ -16,7 +17,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="fa-IR" dir="rtl">
       <body className={`${yekan.variable} ${yekan.variable} antialiased`}>
-        <MainLayout>{children}</MainLayout>
+        <TanstackQueryProvider>
+          <MainLayout>{children}</MainLayout>
+        </TanstackQueryProvider>
       </body>
     </html>
   );

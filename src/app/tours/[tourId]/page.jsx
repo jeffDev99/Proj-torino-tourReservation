@@ -1,14 +1,14 @@
-import Container from "@/app/components/templates/Container";
+import Container from "@/components/templates/Container";
 import Image from "next/image";
-import Button from "@/app/components/ui/atoms/Button";
-import { fetchTour } from "@/app/hooks/tour";
+import Button from "@/components/ui/atoms/Button";
+import { useFetchTour } from "@/core/hooks/tour";
 // Icons
 import { Coffee, Wind, UserTick, Star1, MedalStar, Routing2, Calendar, Calendar2, Bus, Profile2User, Security } from "iconsax-react";
-import { useShowIconBasedOnOption, useCalculateDuration, useGregorian2Persian, useSp, useVehicleP2E } from "@/app/hooks/utils";
+import { useShowIconBasedOnOption, useCalculateDuration, useGregorian2Persian, useSp, useVehicleP2E } from "@/core/hooks/utils";
 
 export default async function TourDetail({ params }) {
   const tourId = (await params).tourId;
-  const tour = await fetchTour(tourId);
+  const tour = await useFetchTour(tourId);
   console.log(tour)
   return (
     <div className=" bg-[#F3F3F3] py-9">

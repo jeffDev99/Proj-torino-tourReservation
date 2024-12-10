@@ -1,16 +1,12 @@
+
 import React from "react";
 import Container from "../../templates/Container";
 import ProductCard from "../molecules/ProductCard";
-
+import { useFetchAllTours } from "@/core/hooks/tour";
 export const dynamic = "force-dynamic";
 
-const fetchTours = async () => {
-  let res = await fetch(`${process.env.BASE_URL}/tour`);
-  let data = await res.json();
-  return data;
-};
 export default async function AllTours() {
-  const tours = await fetchTours();
+  const tours = await useFetchAllTours();
   return (
     <Container>
       <h3 className="text-xl lg:text-3xl mb-2">همه تور ها</h3>

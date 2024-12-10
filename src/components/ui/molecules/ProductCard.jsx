@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import Button from "../atoms/Button";
 import { useRouter } from "next/navigation";
-import { useSp } from "@/app/hooks/utils";
+import { useSp } from "@/core/hooks/utils";
 
 export default function ProductCard({ tourId, imgSrc, title, desc, price, className }) {
   const route = useRouter();

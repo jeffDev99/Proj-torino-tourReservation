@@ -1,8 +1,8 @@
 import React from "react";
-import Container from "../components/templates/Container";
+import Container from "../../components/templates/Container";
 import { Profile } from "iconsax-react";
-import Input from "../components/ui/atoms/Input";
-import Button from "../components/ui/atoms/Button";
+import Input from "../../components/ui/atoms/Input";
+import Button from "../../components/ui/atoms/Button";
 
 export default function Checkout() {
   return (
