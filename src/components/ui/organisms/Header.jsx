@@ -37,7 +37,7 @@ export default function Header() {
           <div className="flex gap-20 items-center justify-between">
             <Image src="/logo.svg" width={146} height={44} alt="logo" className="hidden lg:block" />
             <HambergerMenu size={24} color="#10411B" className="lg:hidden" onClick={() => setMenu(true)} />
-            <MainMenu className={`lg:block ${menu ? "block" : "hidden"}`} menu={menu} setMenu={setMenu}></MainMenu>
+            <MainMenu className={`lg:block transition-all ${menu ? "opacity-100 visible" : "opacity-0 invisible"}`} menu={menu} setMenu={setMenu}></MainMenu>
             {!isLogin ? (
               <Button varient="outline" color="#28A745" bgColor="#28A745" hoverBgColor="#28A745" hoverTextColor="#ffffff">
                 <div className="hidden lg:flex" onClick={() => setIsOpen(true)}>
