@@ -1,7 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
+import {  ArrowDown2, ArrowUp2 } from "iconsax-react";
 
-export default function DropDown({ icon, title, id, children ,dropClassName}) {
+export default function DropDown({ icon, title, id, children ,dropClassName , titleClassName , isIconDropDown}) {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef(id);
 
@@ -24,9 +25,10 @@ export default function DropDown({ icon, title, id, children ,dropClassName}) {
 
   return (
     <div className="relative" ref={dropdownRef}>
-      <div onClick={(e) => showMenuHandler(e)} className={`overflow-hidden rounded-full w-full h-8 flex gap-x-2 items-center justify-center lg:justify-start hover:cursor-pointer select-none text-xl `}>
+      <div onClick={(e) => showMenuHandler(e)} className={`overflow-hidden rounded-full w-full h-8 flex gap-x-2 items-center justify-center lg:justify-start hover:cursor-pointer select-none text-xl ${titleClassName}`}>
         {icon}
         {title}
+        {isIconDropDown &&   <ArrowDown2 size="24" color="#28A745" variant="Linear" className={`transition-all ${dropdownOpen ? "rotate-180 transform-gpu":"rotate-0 "}`}/> } 
       </div>
 
       <div className={`${

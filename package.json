@@ -15,7 +15,9 @@
     "next": "15.0.3",
     "react": "19.0.0-rc-66855b96-20241106",
     "react-dom": "19.0.0-rc-66855b96-20241106",
+    "react-hot-toast": "^2.4.1",
     "react-multi-date-picker": "^4.5.2",
+    "react18-input-otp": "^1.1.4",
     "swiper": "^11.1.15"
   },
   "devDependencies": {

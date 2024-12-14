@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import MainLayout from "../components/templates/layout/MainLayout";
 import TanstackQueryProvider from "@/components/partials/provider/TanstackQueryProvider";
+import { Toaster } from "react-hot-toast";
 import "./globals.css";
 
 const yekan = localFont({
@@ -18,8 +19,9 @@ export default function RootLayout({ children }) {
     <html lang="fa-IR" dir="rtl">
       <body className={`${yekan.variable} ${yekan.variable} antialiased`}>
         <TanstackQueryProvider>
-          <MainLayout>{children}</MainLayout>
+            <MainLayout>{children}</MainLayout>
         </TanstackQueryProvider>
+        <Toaster />
       </body>
     </html>
   );

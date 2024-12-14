@@ -1,7 +1,8 @@
 "use client";
-const setCookies = (token) => {
-  document.cookie = `Token=${token}; max-age=${1 * 24 * 60 * 60}; path=/`;
-};
+function setCookie(name, value, days = 30) {
+  const maxAge = days * 24 * 60 * 60;
+  document.cookie = `${name}=${value}; max-age=${maxAge}; path=/`;
+}
 const getCookies = (cookieName) => {
   return document.cookie
     .split(";")
@@ -11,4 +12,4 @@ const getCookies = (cookieName) => {
 const deleteCookie = (cookieName) => {
   document.cookie = `${cookieName}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
 };
-export { setCookies, getCookies, deleteCookie };
+export { setCookie, getCookies, deleteCookie };
