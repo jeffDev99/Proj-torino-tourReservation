@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Container from "./components/templates/Container";
+import Container from "@/components/templates/Container";
 import Image from "next/image";
 export default function ErrorPage({error}) {
   return (
