@@ -1,7 +1,7 @@
 // react library
 import axios from "axios";
 // my components
-import { getCookies, setCookies } from "../utils/cookies";
+import { getCookies, setCookie } from "../utils/cookies";
 
 // functions for use cookies in the server
 const safeGetCookies = (cookieName) => {
@@ -12,7 +12,7 @@ const safeGetCookies = (cookieName) => {
 };
 const safeSetCookies = (token) => {
   if (typeof window !== "undefined") {
-    setCookies(token);
+    setCookie(token);
   }
 };
 
