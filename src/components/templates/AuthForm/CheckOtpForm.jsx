@@ -3,7 +3,7 @@
 import { useState } from "react";
 import OtpInput from "react18-input-otp";
 import { useCheckOtp } from "@/core/services/mutations";
-import { setCookie } from "@/core/utils/cookies"; 
+import { setCookie } from "@/core/utils/cookies";
 
 function CheckOTPForm({ mobile, setStep, setIsOpen }) {
   const [code, setCode] = useState("");
@@ -18,9 +18,9 @@ function CheckOTPForm({ mobile, setStep, setIsOpen }) {
       { mobile, code },
       {
         onSuccess: (data) => {
-          console.log(data?.data?.user?.mobile)
+          console.log(data?.data?.user?.mobile);
           setCookie("accessToken", data?.data?.accessToken, 30);
-          setCookie("userMobile" ,data?.data?.user?.mobile , 30 )
+          setCookie("userMobile", data?.data?.user?.mobile, 30);
           setCookie("refreshToken", data?.data?.refreshToken, 365);
           setIsOpen(false);
           setStep(1);
@@ -37,12 +37,9 @@ function CheckOTPForm({ mobile, setStep, setIsOpen }) {
   };
 
   return (
-    <div className="flex flex-col w-[358px] h-[362px] bg-white rounded-[20px] shadow-[0_4px_4px_-0px_rgba(0,0,0,0.25)] p-6">
+    <>
       <h4 className="text-xl font-bold text-center">کد تایید را وارد کنید.</h4>
-      <form
-        className="flex flex-col justify-end gap-10 flex-1"
-        onSubmit={checkOtpHandler}
-      >
+      <form className="flex flex-col justify-end gap-10 flex-1" onSubmit={checkOtpHandler}>
         <label>شماره موبایل {mobile}</label>
         <div style={{ direction: "ltr" }}>
           <OtpInput
@@ -58,14 +55,11 @@ function CheckOTPForm({ mobile, setStep, setIsOpen }) {
             }}
           />
         </div>
-        <button
-          className="bg-[#28A745] h-11 text-white rounded-md"
-          type="submit"
-        >
+        <button className="bg-[#28A745] h-11 text-white rounded-md" type="submit">
           ورود به تورینو
         </button>
       </form>
-    </div>
+    </>
   );
 }
 
