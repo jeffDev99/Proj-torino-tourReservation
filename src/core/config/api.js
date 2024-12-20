@@ -1,21 +1,20 @@
 // react library
 import axios from "axios";
 // my components
-import { getCookies, setCookie } from "../utils/cookies";
+import { getCookies } from "../utils/cookies";
 
-// functions for use cookies in the server
+// functions for use cookies in the client
 const safeGetCookies = (cookieName) => {
   if (typeof window !== "undefined") {
     return getCookies(cookieName);
   }
-  return null; 
+  return null;
 };
 const safeSetCookies = (token) => {
   if (typeof window !== "undefined") {
     setCookie(token);
   }
 };
-
 
 // axios instance with interceptors
 const api = axios.create({
