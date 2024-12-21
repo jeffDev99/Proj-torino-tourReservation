@@ -1,10 +1,10 @@
 import { Coffee, Star1, UserTick, Wind } from "iconsax-react";
 
-const useE2p = (s) => s.toString().replace(/\d/g, (d) => "۰۱۲۳۴۵۶۷۸۹"[d]);
+const useE2p = (s) => s?.toString().replace(/\d/g, (d) => "۰۱۲۳۴۵۶۷۸۹"[d]);
 
 const useSp = (number) => {
-  const seperatedNumber = number.toString().match(/(\d+?)(?=(\d{3})+(?!\d)|$)/g);
-  const joinedNumber = seperatedNumber.join(",");
+  const seperatedNumber = number?.toString().match(/(\d+?)(?=(\d{3})+(?!\d)|$)/g);
+  const joinedNumber = seperatedNumber?.join(",");
   return useE2p(joinedNumber);
 };
 

@@ -12,4 +12,10 @@ const useFetchAllTours = () => {
   const queryFn = () => api.get(`/tour`);
   return useQuery({ queryKey, queryFn });
 };
-export { useGetUserData , useFetchAllTours };
+// get tour detail
+const useFetchTour = (tourId) => {
+  const queryKey = ["tour-detail"];
+  const queryFn = () => api.get(`/tour/${tourId}`);
+  return useQuery({ queryKey, queryFn });
+};
+export { useGetUserData , useFetchAllTours , useFetchTour };
