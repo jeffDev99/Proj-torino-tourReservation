@@ -5,10 +5,12 @@ import Button from "../atoms/Button";
 import { useRouter } from "next/navigation";
 import { useSp } from "@/core/hooks/utils";
 
-export default function ProductCard({ tourId, imgSrc, title, desc, price, className ,key }) {
+export default function ProductCard({ tourId, imgSrc, title, desc, price, className  }) {
   const route = useRouter();
+  const formattedPrice = useSp(price);
+
   return (
-    <figure key={key} className={`bg-white shadow-cus-1 rounded-[10px] overflow-hidden ${className}`}>
+    <figure className={`bg-white shadow-cus-1 rounded-[10px] overflow-hidden ${className}`}>
       <Image src={imgSrc} alt={title} width={278} height={160} className="w-full object-contain" />
       <figcaption>
         <h4 className="text-xl p-2 pb-0">{title}</h4>
@@ -18,7 +20,7 @@ export default function ProductCard({ tourId, imgSrc, title, desc, price, classN
             رزرو
           </Button>
           <p className="text-gray text-xs">
-            <span className="text-lightGreen text-base">{useSp(price)}</span>تومان 
+            <span className="text-lightGreen text-base">{formattedPrice}</span>تومان 
           </p>
         </div>
       </figcaption>

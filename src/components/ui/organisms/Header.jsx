@@ -29,7 +29,7 @@ export default function Header() {
     deleteCookie("refreshToken");
       queryClient.clear();
       await refetch();
-      router.push("/");
+      window.location.pathname= "/";
   };
   return (
     <>

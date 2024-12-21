@@ -43,8 +43,6 @@ api.interceptors.response.use(
   },
   async (err) => {
     const originalRequest = err.config;
-    console.log(originalRequest);
-    console.log(err);
     if (err?.response?.status === 401 && originalRequest?._retry !== true) {
       originalRequest._retry = true;
       const res = await getNewToken();
