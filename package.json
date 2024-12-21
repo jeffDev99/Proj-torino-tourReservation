@@ -16,10 +16,12 @@
     "next": "15.0.3",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
+    "react-hook-form": "^7.54.2",
     "react-hot-toast": "^2.4.1",
     "react-multi-date-picker": "^4.5.2",
     "react18-input-otp": "^1.1.4",
-    "swiper": "^11.1.15"
+    "swiper": "^11.1.15",
+    "yup": "^1.6.1"
   },
   "devDependencies": {
     "postcss": "^8",

@@ -4,7 +4,7 @@ import api from "../config/api";
 const useGetUserData = () => {
   const queryKey = ["user-data"];
   const queryFn = () => api.get("user/profile");
-  return useQuery({ queryKey, queryFn });
+  return useQuery({ queryKey, queryFn  , retry:2});
 };
 // get all tours
 const useFetchAllTours = () => {

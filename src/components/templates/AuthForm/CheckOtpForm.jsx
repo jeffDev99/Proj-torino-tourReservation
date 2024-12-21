@@ -1,9 +1,7 @@
 "use client";
-
 import { useState } from "react";
 import OtpInput from "react18-input-otp";
 import { useCheckOtp } from "@/core/services/mutations";
-import { setCookie } from "@/core/utils/cookies";
 
 function CheckOTPForm({ mobile, setStep, setIsOpen }) {
   const [code, setCode] = useState("");
@@ -18,10 +16,6 @@ function CheckOTPForm({ mobile, setStep, setIsOpen }) {
       { mobile, code },
       {
         onSuccess: (data) => {
-          console.log(data?.data?.user?.mobile);
-          setCookie("accessToken", data?.data?.accessToken, 30);
-          setCookie("userMobile", data?.data?.user?.mobile, 30);
-          setCookie("refreshToken", data?.data?.refreshToken, 365);
           setIsOpen(false);
           setStep(1);
         },
